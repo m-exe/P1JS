@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title> Mon titre </title>
+</head>
+<body>
+<input type="search" name="search" id="search">
+<table id="students"></table>
+</body>
+<script>
+  const req = new XMLHttpRequest();
+  req.addEventListener("load", evt => {
+    let data = JSON.parse(req.responseText);
+    let searchBar = document.querySelector("#search");
+    let studentsTable = document.querySelector("#students");
+    let studentsArray = data.students;
+    console.log(data);
+    students = studentsArray.map(student=>[student.firstname,student.lastname,threeDigits(Math.floor(Math.random() * 97))]);
+    createTable(students,studentsTable);
+    search.addEventListener("keyup",()=>{
+      createFilteredTable(students,studentsTable,search.value);
+    })
+    let rows = studentsTable.querySelectorAll("tr");
+    for(let row of rows){
+      row.addEventListener("click",()=>{
+        let res = studentsArray.map(student=>[student.firstname,student.lastname,student.gender]).filter(student=>student[0].includes(row.querySelector("td").innerText));
+        alert(res[0]);
+      })
+    }
+
+  });
+  function createTable(students,container){
+    container.innerHTML = "<tr><th>First name</th><th>Last Name</th><th>Avatar</th></tr>";
+
+    for(student of students){
+      let row = document.createElement("tr");
+      row.innerHTML = "<td>" + student[0] + "</td><td>" + student[1] + "</td><td><img src='animals/"+student[2]+".png'></td>";
+      container.appendChild(row);
+    }
+  }
+  function createFilteredTable(students,container,substring){
+    container.innerHTML = "<tr><th>First name</th><th>Last Name</th><th>Avatar</th></tr>";
+    students = students.filter(student=>student[0].includes(substring));
+    for(student of students){
+      let row = document.createElement("tr");
+      row.innerHTML = "<td>" + student[0] + "</td><td>" + student[1] + "</td><td><img src='animals/"+student[2]+".png'></td>";
+      container.appendChild(row);
+    }
+  }
+  function threeDigits(n){
+    let text = n.toString();
+    while(text.length<3){
+      text = "0" + text;
+    }
+    return text;
+  }
+  req.open("GET", "https://www.cril.univ-artois.fr/~lecoutre/students.json");
+  req.send();
+
+
+</script>
+</html>
