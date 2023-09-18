@@ -1,0 +1,27 @@
+<script>
+  let t = [10, 8, 13];
+  let isNull = true;
+
+  for(let i=0;i<t.length;i++){
+    if(t[i]===0){
+      isNull = false;
+    }
+  }
+  console.log(isNull);
+
+  isNull = true;
+  for(let v of t){
+    if(v===0){
+      isNull = false;
+    }
+  }
+  console.log(isNull);
+
+  let r = true;
+  for(i=0;i<=t.length + 1;i++){
+    if(t[i]>t[i+1]){
+      r = false;
+    }
+  }
+  console.log(r);
+</script>

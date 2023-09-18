@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title> Exo2 - TP4 </title>
+    </head>
+    <body>
+
+    </body>
+</html>
+
+<script>
+    let paragraph = document.createElement("p");
+    paragraph.append("Hello ");
+    document.body.append(paragraph);
+    let emphasis = document.createElement("em");
+    emphasis.append("World");
+    paragraph.append(emphasis, "!");
+    paragraph.prepend("¡");
+    let test = document.createElement("p");
+    test.append("Test");
+    paragraph.querySelector("em").before(test);
+
+</script>

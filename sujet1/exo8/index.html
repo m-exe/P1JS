@@ -1,0 +1,56 @@
+<script>
+  t1 = [8,5,6,65];
+  t2 = [89,7,4];
+  let t3 = [];
+
+  t1 = t1.sort(function (a,b){
+    return a-b;
+  });
+  console.log(t1)
+  t2 = t2.sort(function (a,b){
+    return a-b;
+  });
+  console.log(t2)
+
+  for (let i of t1){
+    t3.push(i);
+  }
+  for (let i of t2){
+    t3.push(i);
+  }
+
+  t3 = t3.sort(function (a,b){
+    return a-b;
+  });
+  console.log(t3)
+
+  // Methode n°2
+
+  //let t1 = [1,5,6,12];
+ // let t2 = [3, 10, 34];
+  //let fusion = [];
+
+ // let i = 0;
+  //let j = 0;
+  //while (i < t1.length && j < t2.length) {
+  //    if(t1[i] < t2[j]) {
+  //        fusion.push(t1[i]);
+   //       i++;
+ //     } else {
+      //    fusion.push(t2[j]);
+  //        j++;
+     // }
+ // }
+  //if (i < t1.length) {
+  //    for (i=i; i <t1.length; i++){
+   //       fusion.push(t1[i]);
+  //    }
+//  } else if (j < t2.length){
+   //   for (j=j; j<t2.length; j++){
+   //       fusion.push(t2[j]);
+    //  }
+  //}
+
+ // console.log(fusion);
+
+</script>

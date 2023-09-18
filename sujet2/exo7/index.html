@@ -1,0 +1,26 @@
+<img src="https://www.cril.univ-artois.fr/~lecoutre/teaching/jspoo/code2/papillo4.jpg" alt="image" id="element1">
+<button id="element2" alt="button">Voir / cacher </button>
+
+<script>
+    let element1 = document.getElementById("element1");
+    let element2 = document.getElementById("element2");
+    console.log(element1, element2);
+    console.log(element1.src, element1.alt);
+    element1.addEventListener("click",()=>alert("click"));
+    element2.addEventListener("dblclick",()=> {
+        if (element1.style.visibility == "hidden"){
+            element1.style.visibility = "visible";
+        }
+        else {
+            element1.style.visibility = "hidden";
+        }
+    });
+    element1.addEventListener("mouseover", () => {
+        element1.style.border= "1px solid red";
+    });
+    element1.addEventListener("mouseout", () => {
+        element1.style.border= "none";
+    });
+
+
+</script>

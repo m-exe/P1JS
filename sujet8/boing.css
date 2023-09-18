@@ -1,0 +1,19 @@
+main {
+    width:800px; 
+    margin: 0 auto;
+    background-color:#eeeeee;
+    border-style:solid 1px #666666; 
+    padding:20px;
+    text-align:center;
+}
+canvas {
+    width:400px; height=300;   
+    border: 1px solid black;
+}
+
+input[type="number"] {
+    width:40px;
+}
+input[type="color"] {
+    width:70px;
+}

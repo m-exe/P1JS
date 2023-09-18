@@ -1,0 +1,22 @@
+<script>
+    function erathosthene(n){
+        let premier = [false,false];
+        let res = [];
+        for(let i=2;i<=n;i++){
+            premier[i] = true;
+        }
+        for(let i=2;i<=n;i++){
+            if(premier[i]==true){
+                res.push(i);
+                for(j=i+1;j<=n;j++){
+                    if(j%i==0){
+                        premier[j] = false;
+                    }
+                }
+            }
+        }
+        return res;
+    }
+
+    console.log(erathosthene(4));
+</script>

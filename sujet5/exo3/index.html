@@ -1,0 +1,32 @@
+<script>
+    let tab = [
+        {
+            "nom" : "M L",
+            "age" : 18
+        },
+        {
+            "nom" : "D L",
+            "age" : 23
+        },
+        {
+            "nom" : "J D",
+            "age" : 12
+        }
+    ];
+    let tab2 = tab.filter((v)=>{
+        return v.age > 13;
+    });
+    console.log(tab2);
+    function countChar(tab){
+        res = 0;
+        for(personnes of tab){
+            res += personnes.nom.length;
+        }
+        return res;
+    }
+    console.log(countChar(tab2));
+    let tab3 = tab2.sort((v)=>{
+        return v.nom;
+    });
+    console.log(tab3);
+</script>

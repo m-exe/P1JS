@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Boing</title>
+  <link href="boing.css" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <audio id="audio1" src="boing1.wav"></audio>
+    <audio id="audio2" src="boing2.wav"></audio>
+    <audio id="audio3" src="boing3.wav"></audio>
+    <audio id="backgroundMusic" src="fond.mp3" loop></audio>
+    <canvas id="canvas"></canvas>
+    <p>
+      Ball Size: <input id="ballSize" type="number" min="1" max="150" value="15"> &nbsp;
+      Ball Color: <input id="ballColor" type="color" value="#DC143C">
+    </p>
+    <p>
+      <button id="addBall">Add Ball</button> &nbsp;
+      <button id="clearCanvas">Clear Canvas</button>
+    </p>
+    <small>
+      Background music by DanoSongs.com (<a href="http://www.danosongs.com" target="_blank"> www.danosongs.com</a>)
+    </small>
+  </main>
+  <script src="boing.js"></script>
+</body>
+
+</html>

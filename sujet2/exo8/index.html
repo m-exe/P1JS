@@ -1,0 +1,14 @@
+<div style="display: flex; align-items: center">
+    <img src="papillon2.jpg" alt="" id="image1">
+    <button style= "margin-inline: 10px" onclick="e()">Echanger</button>
+    <img src="papillon1.jpg" alt="" id="image2">
+</div>
+<script>
+    function e(){
+        let image1 = document.querySelector("#image1");
+        let image2 = document.querySelector("#image2");
+        let t = image1.src;
+        image1.src = image2.src;
+        image2.src = t;
+    }
+</script>

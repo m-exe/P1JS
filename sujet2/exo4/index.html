@@ -1,0 +1,34 @@
+<script>
+  function sommeDiviseur(n){
+    let t = 0;
+    for (let i=0; i < n; i++){
+      if (n%i === 0){
+        t += i;
+      }
+    }
+    return t;
+  }
+  console.log(sommeDiviseur(10));
+
+  function nombreAmiDe(n){
+    let somme = sommeDiviseur(n);
+    if (sommeDiviseur(somme) === n){
+      return somme;
+    } else {
+      return 0;
+    }
+  }
+  console.log(nombreAmiDe(220));
+  console.log(nombreAmiDe(1210));
+
+  function nombresAmis(l){
+    r = [];
+    for (let i = 0; i <= l; i++){
+      if (nombreAmiDe(i)!==0 && r.includes(nombreAmiDe(i)) === false && r.includes(i) === false){
+        r.push(nombreAmiDe(i))
+        console.log(i + "=" +nombreAmiDe(i));
+      }
+    }
+  }
+  nombresAmis(1210);
+</script>

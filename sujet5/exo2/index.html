@@ -1,0 +1,16 @@
+<script>
+    let m = [[2,3,5],[5,6,7],[1,4,8]];
+    t = m.flat();
+    console.log(t);
+    function transform(tab){
+        tab = tab.filter((v)=>{
+            return v%2==0;
+        });
+        tab = tab.map((v)=>{
+            return v**2;
+        })
+        return tab;
+    }
+    t = transform(t);
+    console.log(t);
+</script>

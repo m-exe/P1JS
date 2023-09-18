@@ -1,0 +1,14 @@
+<script>
+    let film = {
+        "titre" : "Film",
+        "realisateur": "MoiMajuscule",
+        "acteurs": ["moi", "pamoi", "toi", "pastoi"],
+        "notes": [1,4,5,3]
+    }
+
+    film.casting = function() {
+        return this.realisateur + " avec comme acteur principal " + this.acteurs[0];
+    }
+    console.log("Le casting de ce film est :", film.casting());
+
+</script>

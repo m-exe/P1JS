@@ -1,0 +1,16 @@
+<script>
+  let tab1 = [78,77,4,27];
+  let tab2 = [78,88,4,27];
+  let r = true;
+
+ if (tab1.length === tab2.length){
+   for (i=0; i<tab1.length; i++){
+     if (tab1[i] !== tab2[i]){
+       r = false
+     }
+   }
+ } else {
+   r = false;
+ }
+  console.log(r)
+</script>
